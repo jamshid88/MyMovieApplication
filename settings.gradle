@@ -1,2 +1,4 @@
 rootProject.name = "MyMovieApplication"
 include ':app'
+//include ':lib-core-mvp'
+//include ':lib-easyadapter-pagination'

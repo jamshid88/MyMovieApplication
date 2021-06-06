@@ -1,8 +1,8 @@
-package com.example.mymovieapplication.network
+package ru.surfstudio.android.easyadapter.sample.network
 
-import com.example.mymovieapplication.model.Actor
-import com.example.mymovieapplication.model.Movie
-import com.example.mymovieapplication.model.MovieResponse
+import ru.surfstudio.android.easyadapter.sample.domain.Actor
+import ru.surfstudio.android.easyadapter.sample.domain.Movie
+import ru.surfstudio.android.easyadapter.sample.domain.MovieResponse
 import com.google.gson.JsonObject
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
@@ -49,5 +49,5 @@ interface MovieApiService {
     ): Observable<JsonObject?>?
 
     @GET("search/movie")
-    fun getMoviesBySearch(@QueryMap queries: HashMap<String?, String?>?): Observable<JsonObject?>?
+    fun getMoviesBySearch(@QueryMap queries: HashMap<String, String>): Observable<JsonObject?>?
 }
